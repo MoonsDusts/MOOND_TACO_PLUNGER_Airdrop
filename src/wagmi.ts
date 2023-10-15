@@ -1,12 +1,12 @@
 import { getDefaultWallets } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig } from "wagmi";
-import { bscTestnet } from "wagmi/chains";
+import { arbitrumNova } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 
 export const walletConnectProjectId = "7b0ebdf3fc8255de5cf022ab2ef1eda6";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [bscTestnet],
+  [arbitrumNova],
   [publicProvider()]
 );
 

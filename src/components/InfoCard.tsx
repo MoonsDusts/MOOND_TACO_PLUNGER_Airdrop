@@ -1,4 +1,4 @@
-import { bscTestnet } from "viem/chains";
+import { arbitrumNova } from "viem/chains";
 
 import { MOOND_TOKEN_ADDR } from "../contracts";
 import InfoSVG from "./svg/Info";
@@ -40,12 +40,12 @@ const InfoCard: React.FC<InfoCardType> = ({ className }) => {
         MOOND Contract Address on Arbitrum Nova: <br />
         <a
           href={`https://nova.arbiscan.io/token/${
-            MOOND_TOKEN_ADDR[bscTestnet.id]
+            MOOND_TOKEN_ADDR[arbitrumNova.id]
           }`}
           target="_blank"
           className="font-bold mt-4 underline hover:brightness-90 active:brightness-95 transition-all"
         >
-          {MOOND_TOKEN_ADDR[bscTestnet.id]}
+          {MOOND_TOKEN_ADDR[arbitrumNova.id]}
         </a>
       </div>
     </div>

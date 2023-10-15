@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Dialog } from "@headlessui/react";
-import { bscTestnet } from "viem/chains";
+import { arbitrumNova } from "viem/chains";
 import { useNetwork, useSwitchNetwork } from "wagmi";
 import { Inter } from "next/font/google";
 
@@ -14,14 +14,14 @@ const WrongNetworkModal = () => {
   const { switchNetworkAsync } = useSwitchNetwork();
 
   useEffect(() => {
-    if (chain && chain.id !== bscTestnet.id) setOpen(true);
+    if (chain && chain.id !== arbitrumNova.id) setOpen(true);
     else setOpen(false);
   }, [chain]);
 
   const onSwitch = async () => {
     try {
-      if (chain?.id !== bscTestnet.id)
-        await switchNetworkAsync?.(bscTestnet.id);
+      if (chain?.id !== arbitrumNova.id)
+        await switchNetworkAsync?.(arbitrumNova.id);
     } catch (err) {
       console.log(err);
     }
